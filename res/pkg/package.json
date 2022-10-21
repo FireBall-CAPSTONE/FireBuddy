@@ -1,0 +1,12 @@
+{
+  "name": "fire-buddy-renderer",
+  "version": "0.1.0",
+  "files": [
+    "fire_buddy_renderer_bg.wasm",
+    "fire_buddy_renderer.js",
+    "fire_buddy_renderer.d.ts"
+  ],
+  "module": "fire_buddy_renderer.js",
+  "types": "fire_buddy_renderer.d.ts",
+  "sideEffects": false
+}
