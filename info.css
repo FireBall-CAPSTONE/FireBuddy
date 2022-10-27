@@ -1,6 +1,6 @@
 /* Main Content Container div */
 #content {
-    height: 87vh;
+    height: 300vh;
     width: 95%;
     margin: auto;
     top: 50px;
@@ -32,16 +32,55 @@
     margin-top: 8px;
 }
 
-#infoBoxBorder {
-    background-color: #0E1114;
-    border-radius: 8px;
-    opacity: 0.55;
+#infoBoxContainer {
+    margin-top: 47px;
     width: 835px;
-    height: 228px;
+    height: 260px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 79px;
+    text-align: left;
 }
+
+#meteorSymbol {
+    width: 64px;
+    height: 64px;
+    margin-left: 20px;
+    float: left;
+}
+
+#infoBoxHeader {
+    color: #FF9052;
+    font-family: Lato;
+    font-size: 35px;
+    display: flex;
+    margin-block: 0;
+    margin-inline: 0;
+    height: 64px;
+    align-items: center;
+}
+
+#infoBoxBorder {
+    background-color: rgba(14, 17, 20, 0.53);
+    border-radius: 8px;
+    width: 835px;
+    height: 228px;
+    margin-top: -50px;
+}
+
+#detailText {
+    padding: 30px;
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 20px;
+    line-height: 26px;
+    width: 802px;
+}
+
+tr td {
+    border: 1px solid;
+}
+
+
 
 /* Navbar container div 2 */
 #navBar {
@@ -138,6 +177,7 @@ body {
     font-weight: 700;
     font-size: 30px;
     color: white;
+    bottom: 0;
 }
 
 .footerContent {
