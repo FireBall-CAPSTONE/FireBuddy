@@ -1,6 +1,5 @@
 /* Main Content Container div */
 #content {
-    height: 300vh;
     width: 95%;
     margin: auto;
     top: 50px;
@@ -16,6 +15,7 @@
     margin-top: 30px;
     text-align: center;
     color: white;
+    overflow: hidden;
 }
 
 #fballsborder {
@@ -41,14 +41,14 @@
     text-align: left;
 }
 
-#meteorSymbol {
+#infoBoxContainer img {
     width: 64px;
     height: 64px;
     margin-left: 20px;
     float: left;
 }
 
-#infoBoxHeader {
+#infoBoxContainer h2 {
     color: #FF9052;
     font-family: Lato;
     font-size: 35px;
@@ -59,15 +59,16 @@
     align-items: center;
 }
 
-#infoBoxBorder {
+#infoBoxContainer div {
     background-color: rgba(14, 17, 20, 0.53);
     border-radius: 8px;
     width: 835px;
     height: 228px;
     margin-top: -50px;
+    margin-bottom: 30px;
 }
 
-#detailText {
+#infoBoxContainer div p {
     padding: 30px;
     color: #FFFFFF;
     font-family: Lato;
@@ -76,11 +77,17 @@
     width: 802px;
 }
 
-tr td {
-    border: 1px solid;
+#memberTable {
+    width: 100%;
+    margin-top: -48px;
 }
 
-
+#memberTable td {
+    padding: 1rem;
+    text-align: center;
+    font-family: Lato;
+    color: #FFFFFF;
+}
 
 /* Navbar container div 2 */
 #navBar {
