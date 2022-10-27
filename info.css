@@ -80,13 +80,18 @@
 #memberTable {
     width: 100%;
     margin-top: -48px;
+    margin-left: 30px;
 }
 
 #memberTable td {
     padding: 1rem;
-    text-align: center;
+    text-align: left;
     font-family: Lato;
     color: #FFFFFF;
+}
+
+#linkColor {
+    color: #00A6FF;
 }
 
 /* Navbar container div 2 */
