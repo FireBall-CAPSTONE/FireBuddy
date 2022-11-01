@@ -22,8 +22,8 @@ async function run() {
         // canvas.height = window.innerHeight;
 
 
-        canvas.width = (window.innerWidth * .95) - 15;
-        canvas.height = window.innerHeight * .80;
+        canvas.width = (window.innerWidth * .95) - 32;
+        canvas.height = window.innerHeight * .88;
         
         app.update(delta/1000.0, canvas.height, canvas.width);
         app.render();

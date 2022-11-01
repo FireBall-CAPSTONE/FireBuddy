@@ -338,6 +338,11 @@ function getImports() {
     imports.wbg.__wbg_log_f3018d65b8512e4f = function(arg0, arg1) {
         console.log(getStringFromWasm0(arg0, arg1));
     };
+    imports.wbg.__wbindgen_boolean_get = function(arg0) {
+        const v = getObject(arg0);
+        const ret = typeof(v) === 'boolean' ? (v ? 1 : 0) : 2;
+        return ret;
+    };
     imports.wbg.__wbindgen_object_clone_ref = function(arg0) {
         const ret = getObject(arg0);
         return addHeapObject(ret);
@@ -349,11 +354,6 @@ function getImports() {
         var len0 = WASM_VECTOR_LEN;
         getInt32Memory0()[arg0 / 4 + 1] = len0;
         getInt32Memory0()[arg0 / 4 + 0] = ptr0;
-    };
-    imports.wbg.__wbindgen_boolean_get = function(arg0) {
-        const v = getObject(arg0);
-        const ret = typeof(v) === 'boolean' ? (v ? 1 : 0) : 2;
-        return ret;
     };
     imports.wbg.__wbg_instanceof_WebGl2RenderingContext_d76863c237fc08d8 = function(arg0) {
         const ret = getObject(arg0) instanceof WebGL2RenderingContext;
@@ -568,8 +568,8 @@ function getImports() {
         const ret = wasm.memory;
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper91 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 10, __wbg_adapter_18);
+    imports.wbg.__wbindgen_closure_wrapper118 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 24, __wbg_adapter_18);
         return addHeapObject(ret);
     };
 
