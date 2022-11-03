@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FireBuddy</title>
     <link rel="stylesheet" href="firedata.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="firedata.js"></script>
   </head>
   <body>
+    <div class="main"></div>
     <div id="content">
         <div id="navBar">
             <div class="page" id="home">
@@ -25,21 +28,84 @@
         </div>
 
         <div id="firedataContent">
-            <p> </p>
-            <p>Start of FireData Content</p>
+
+            <div id="spacer"></div>
+
+            <div id="filters">
+                <div id="topHalf">
+                    <button class="buttonLabel" id="locationButton">Location: N/A</button>
+                    <button class="buttonLabel" id="startButton">Start Date: N/A</button>
+                    <button class="buttonLabel" id="endButton">End Date: N/A</button>
+                    <button class="buttonLabel" id="velMinButton">Velocity Min: N/A</button>
+                    <button class="buttonLabel" id="velMaxButton">Velocity Max: N/A</button>
+                    <button class="buttonLabel" id="energyMinButton">Energy Min: N/A</button>
+                    <button class="buttonLabel" id="energyMaxButton">Energy Max: N/A</button>
+                </div>
+                <div id="bottomHalf">
+                    <div id="inputField">
+                    </div>
+                    <div id="filterButtons">
+                        <button id="questionMark">?</button>
+                        <button id="clearFilters">Clear Filters</button>
+                        <button id="filterButton">Filter</button>  
+                    </div>
+                </div>
+            </div>
+
+            <div id="infoDiv">
+                <p>
+                    <h2>General Information</h2>
+                    Welcome to the FireData page which provides an out of this world table (initially showing the 5 most recent fireballs recorded) 
+                    with stellar filters, and a neat frequency graph that shows the number of fireballs per year over the last 5 years!
+                    Please note, some of the values in the table will display as "null". This means there is no recorded data from NASA for that specific field for that
+                    specific fireball. 
+                </p>
+                <p>
+                    <h2>Filter Information</h2>
+                    To use the filters, simply click one of the filter buttons above ("location", "start date", "end date", "velocity min", "velocity max", 
+                    "energy min", and "energy max"). Once a filter is clicked, an input field will display. From there, simply enter or select your choice and 
+                    click out of the input. Once done, you'll notice your desired filter is saved. If you are satisfied with your filters, click the "filter" button. 
+                    Upon doing so, the below table will populate with your filters applied. You can also clear all filters and set to the original table by 
+                    clicking the "clear filters" button. To close this information section, simply click the question mark button again.
+                </p>
+                <p id="closeInfo">
+                    To close this information section, simply click the question mark button again.
+                </p>
+            </div>
+
+            <table id="fireballTable">
+                <thead>
+                    <tr>
+                        <th>Date & Time (UT)</th>
+                        <th>Energy (J * 10^10)</th>
+                        <th>Impact Energy (kt)</th>
+                        <th>Latitude</th>
+                        <th>Latitude Direction</th>
+                        <th>Longitude</th>
+                        <th>Longitude Direction</th>
+                        <th>Altitude (km)</th>
+                        <th>Velocity (km/s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
         </div>
+
+        <footer class="footer">
+            <div class="footerContent" id="fireballImg1">
+                <img src="fBall.png" alt="Fireball Footer">
+            </div>
+            <div class="footerContent" id="footerText">
+                <p>FireBuddy | Team FireBall @2022</p>
+            </div>
+            <div class="footerContent" id="fireballImg2">
+                <img src="fBall.png" alt="Fireball Footer">
+            </div>
+        </footer>
     </div>
 
-    <footer class="footer">
-        <div class="footerContent" id="fireballImg1">
-            <img src="fBall.png" alt="Fireball Footer">
-        </div>
-        <div class="footerContent" id="footerText">
-            <p>FireBuddy | Team FireBall @2022</p>
-        </div>
-        <div class="footerContent" id="fireballImg2">
-            <img src="fBall.png" alt="Fireball Footer">
-        </div>
-    </footer>
+    <div id="spacerBottom"></div>
   </body>
 </html>
