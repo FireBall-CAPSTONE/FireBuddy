@@ -7,7 +7,10 @@
     <title>FireBuddy</title>
     <link rel="stylesheet" href="firedata.css">
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js" defer></script>
     <script type="text/javascript" src="firedata.js"></script>
+    <script src="scripts/script.js" defer></script>
   </head>
   <body>
     <div class="main"></div>
@@ -91,6 +94,25 @@
 
                 </tbody>
             </table>
+            <div id="firedataContent"> 
+                <p>Fireball Frequency Graph</p>
+                <div id="chartWrapper">
+                    <canvas id="myChart" width="400" height="400"></canvas>
+                </div>
+                <!--text input year and button to update graph with year-->
+                <p>Update By Year (1988-2022)</p>
+                <input type="number" id="year" min="1988" max="2022" placeholder="Enter year">
+                <button id="update">Update</button>
+                <!--update graph with year span-->
+                <p>Update By Year Span</p>
+                <input type="number" id="startYear" placeholder="Start Year" min="1988" max="2022">
+                <input type="number" id="endYear" placeholder="End Year" min="1988" max="2022">
+                <button id="updateSpan">Update</button>
+    
+                <div id="data_interpretation">
+                    <p id="interpret"></p>
+                </div>
+            </div>
         </div>
 
         <footer class="footer">

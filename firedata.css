@@ -299,3 +299,10 @@ body {
         transform: scale(1.5);
     }
 }
+
+#chartWrapper {
+    display: inline-block;
+    position: relative;
+    width: 22%;
+    margin: auto;
+}
