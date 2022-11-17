@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FireBuddy</title>
+    <link rel="stylesheet" href="../static/css/predictions.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js">script></script>
+      <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@3.0.0-rc12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
+    <script src="https://vega.github.io/datalib/datalib.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vega-tooltip@0.16.0/build/vega-tooltip.min.js"></script>
+  </head>
+<script>
+function pre() {
+var date= $('#date').val();
+var amount= $('#amount').val();
+  $.ajax({
+              url: "/predict",
+              type: "POST",
+              data: {date:date,
+              amount:amount}
+          }).done(function(response) {
+            var html= "<br><br><br><p> <b> RESULT : <b><p>";
+            response = response.result;
+                 $.each(response,function(key,val){
+                 console.log(val);
+                    html+="<p>"+val+"<p>"
+                });
+                html +="<br>";
+                $(".show-data").append(html);
+            });
+};
+  </script>
+
+  <body>
+    <div class="main"></div>
+    <div id="content">
+        <div id="navBar">
+            <div class="page" id="home">
+                <a href="{{url_for('home')}}">Home</a>
+            </div>
+            <div class="page" id="info">
+                <a href="{{url_for('info')}}">Info</a>
+            </div>
+            <div class="page" id="firedata">
+                <a href="{{url_for('data')}}">FireData</a>
+            </div>
+            <div class="page" id="predictions">
+                <a href="{{url_for('prediction')}}">Predictions</a>
+            </div>
+        </div>
+
+        <div id="predictionsContent">
+            <script type="text/javascript">
+      function parse(url, div) {
+        var opt = {
+          mode: "vega-lite",
+          renderer: "svg",
+          actions: {export: true, source: false, editor: false}
+        };
+
+        vegaEmbed("#"+div, url, opt, function(error, result) {
+          // result.view is the Vega View, url is the original Vega-Lite specification
+          vegaTooltip.vegaLite(result.view, url);
+        });
+      }
+
+      parse("/data/group", "group")
+    </script>
+            <p> </p>
+            <p>
+                Enter a Prediction<br><br>
+                Date : <input type="date" id="date" name="date"><br><br>
+                Number of Fireballs <input type="amount" id="amount" name="amount" min=2><br><br>
+                <button id="clicked" onclick="pre()">Submit</button>
+        </p>
+            <div class="show-data" > </div>
+
+
+
+        </div>
+
+
+        <footer class="footer">
+            <div class="footerContent" id="fireballImg1">
+                <img src="../static/images/fBall.png" alt="Fireball Footer">
+            </div>
+            <div class="footerContent" id="footerText">
+                <p>FireBuddy | Team FireBall @2022</p>
+            </div>
+            <div class="footerContent" id="fireballImg2">
+                <img src="../static/images/fBall.png" alt="Fireball Footer">
+            </div>
+        </footer>
+    </div>
+    <div id="spacerBottom"></div>
+  </body>
+</html>

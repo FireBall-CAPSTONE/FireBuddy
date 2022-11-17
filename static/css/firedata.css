@@ -1,0 +1,347 @@
+/* Main Content Container div */
+#content {
+    height: auto;
+    width: 95%;
+    margin: auto;
+    top: 50px;
+    border: 2px solid black;
+    position: relative;
+    border-radius: 15px;
+    background-color: #3A4454;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* Home Content Div */
+#firedataContent {
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+}
+
+/* Navbar container div 2 */
+#navBar {
+    display: flex;
+    width: 800px;
+    height: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    background-color: #53687E;
+    border-radius: 10px;
+    top: -25px;
+}
+
+/* navbar div classes */
+.page {
+    display: inline-block;
+    height: 50px;
+    width: 200px;
+    border: 1px solid black;
+    text-align: center;
+    vertical-align: top;
+    line-height: 50px;
+}
+
+/* Navbar hyperlink text editing */
+.page a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+}
+
+/* Navbar left/right curved border */
+#home {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#predictions {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Flames on nav bar while hovering */
+#predictions:hover {
+    background-image: url("bfFinal.gif");
+}
+
+#home:hover {
+    background-image: url("bfFinal.gif");
+}
+
+#info:hover {
+    background-image: url("bfFinal.gif");
+}
+
+/* Changing nav button colors on hover, keeping current page black */
+#home a:hover {
+    color: black;
+}
+
+#info a:hover {
+    color: black;
+}
+
+#firedata a {
+    color: black;
+}
+
+#predictions a:hover {
+    color: black;
+}
+
+/* Body Background color CSS */
+/* background-color: #767778; */
+/*
+body {
+    background: url(https://i.ibb.co/87GbbFP/2799006.jpg) no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+*/
+
+/* Footer CSS */
+.footer {
+    height: 75px;
+    background-color: #53687E;
+    border-top: 1px solid black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: auto;
+    margin: auto;
+    position: relative;
+    display: flex;
+    margin-bottom: 0px;
+    z-index: 10;
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+}
+
+.footerContent {
+    display: inline-block;
+    height: 100%;
+}
+
+#footerText {
+    width: 80%;
+}
+
+#footerText p {
+    margin-top: 20px;
+}
+
+#fireballImg1 {
+    width: 10%;
+}
+
+#fireballImg1 img{
+    margin-top: 10px;
+}
+
+#fireballImg2 {
+    width: 10%;
+}
+
+#fireballImg2 img{
+    margin-top: 10px;
+}
+
+/* FireData Specific CSS*/
+table {
+    padding: 20px;
+    margin: auto;
+}
+
+table th {
+    border: 1px solid white;
+    width: 100px;
+}
+
+table td {
+    border: 1px solid white;
+}
+
+/* FILTER CSS */
+
+/*MAIN CONTAINER*/
+#filters {
+    height: auto;
+    margin: auto;
+    display: inline-block;
+}
+
+#topHalf {
+    width: auto;
+    height: 5vh;
+}
+
+#bottomHalf {
+    width: auto;
+    height: 5vh;
+}
+
+#filterButtons {
+    float: right;
+}
+
+#inputField {
+    float: left;
+}
+
+input, select {
+    background-color: rgba(0,0,0,0.2);
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+select option {
+    background-color: #011123;
+}
+
+#filters button {
+    background-color: rgba(0,0,0,0.2);
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#filters button:focus {
+    background-color: rgba(0,0,0,0.1);
+    border: 1px solid white;
+}
+
+#filters button:hover {
+    background-color: #232527;
+    border: 1px solid white;
+}
+
+#spacer {
+    height: 2vh;
+}
+
+#spacerBottom {
+    height: 100px;
+}
+
+input[type="date"] { 
+    border: 1px solid black;
+    width: 115px;
+    text-align: center;
+    font-size: 14px;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+#questionMark {
+    border-radius: 50%;
+    border: 1px solid black;
+    background: rgb(36,60,84);
+    background: radial-gradient(circle, rgba(36,60,84,1) 0%, rgba(2,28,57,1) 100%);
+    font-weight: bolder;
+}
+
+#infoDiv {
+    height: auto;
+    margin: auto;
+    width: auto;
+    max-width: 53%;
+    background-color: rgba(0,0,0,0.2);
+    color: white;
+    text-align: center;
+    text-indent: 50px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: none;
+}
+
+#infoDiv h2 {
+    color: #53687E;
+}
+
+
+#closeInfo {
+    color: #53687E;
+    font-weight: bold;
+}
+/* BG TESTING */
+body {
+    background: rgb(0,19,38);
+    background: radial-gradient(circle, rgba(0,19,38,1) 0%, rgba(2,11,22,1) 100%);
+}
+ /* Star background animations from codepen user "wheresdara": https://codepen.io/wheresdara/pen/wvXBpwa */
+.main {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 1px;
+    width: 1px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: -42vw -4vh 0px 0px #fff,25vw -41vh 0px 0px #fff,-20vw 49vh 0px 1px #fff,5vw 40vh 1px 1px #fff,29vw 19vh 1px 0px #fff,-44vw -13vh 0px 0px #fff,46vw 41vh 0px 1px #fff,-3vw -45vh 0px 1px #fff,47vw 35vh 1px 0px #fff,12vw -8vh 1px 0px #fff,-34vw 48vh 1px 1px #fff,32vw 26vh 1px 1px #fff,32vw -41vh 1px 1px #fff,0vw 37vh 1px 1px #fff,34vw -26vh 1px 0px #fff,-14vw -49vh 1px 0px #fff,-12vw 45vh 0px 1px #fff,-44vw -33vh 0px 1px #fff,-13vw 41vh 0px 0px #fff,-36vw -11vh 0px 1px #fff,-23vw -24vh 1px 0px #fff,-38vw -27vh 0px 1px #fff,16vw -19vh 0px 0px #fff,28vw 33vh 1px 0px #fff,-49vw -4vh 0px 0px #fff,16vw 32vh 0px 1px #fff,36vw -18vh 1px 0px #fff,-25vw -30vh 1px 0px #fff,-23vw 24vh 0px 1px #fff,-2vw -35vh 1px 1px #fff,-25vw 9vh 0px 0px #fff,-15vw -34vh 0px 0px #fff,-8vw -19vh 1px 0px #fff,-20vw -20vh 1px 1px #fff,42vw 50vh 0px 1px #fff,-32vw 10vh 1px 0px #fff,-23vw -17vh 0px 0px #fff,44vw 15vh 1px 0px #fff,-40vw 33vh 1px 1px #fff,-43vw 8vh 0px 0px #fff,-48vw -15vh 1px 1px #fff,-24vw 17vh 0px 0px #fff,-31vw 50vh 1px 0px #fff,36vw -38vh 0px 1px #fff,-7vw 48vh 0px 0px #fff,15vw -32vh 0px 0px #fff,29vw -41vh 0px 0px #fff,2vw 37vh 1px 0px #fff,7vw -40vh 1px 1px #fff,15vw 18vh 0px 0px #fff,25vw -13vh 1px 1px #fff,-46vw -12vh 1px 1px #fff,-18vw 22vh 0px 0px #fff,23vw -9vh 1px 0px #fff,50vw 12vh 0px 1px #fff,45vw 2vh 0px 0px #fff,14vw -48vh 1px 0px #fff,23vw 43vh 0px 1px #fff,-40vw 16vh 1px 1px #fff,20vw -31vh 0px 1px #fff,-17vw 44vh 1px 1px #fff,18vw -45vh 0px 0px #fff,33vw -6vh 0px 0px #fff,0vw 7vh 0px 1px #fff,-10vw -18vh 0px 1px #fff,-19vw 5vh 1px 0px #fff,1vw 42vh 0px 0px #fff,22vw 48vh 0px 1px #fff,39vw -8vh 1px 1px #fff,-6vw -42vh 1px 0px #fff,-47vw 34vh 0px 0px #fff,-46vw 19vh 0px 1px #fff,-12vw -32vh 0px 0px #fff,-45vw -38vh 0px 1px #fff,-28vw 18vh 1px 0px #fff,-38vw -46vh 1px 1px #fff,49vw -6vh 1px 1px #fff,-28vw 18vh 1px 1px #fff,10vw -24vh 0px 1px #fff,-5vw -11vh 1px 1px #fff,33vw -8vh 1px 0px #fff,-16vw 17vh 0px 0px #fff,18vw 27vh 0px 1px #fff,-8vw -10vh 1px 1px #fff;
+  
+  /* stars were too big with the layers above but left the code in case no one cares  -- as in, if noone's just that  one other loner who actually cares    */
+  
+  box-shadow: 24vw 9vh 1px 0px #fff,12vw -24vh 0px 1px #fff,-45vw -22vh 0px 0px #fff,-37vw -40vh 0px 1px #fff,29vw 19vh 0px 1px #fff,4vw -8vh 0px 1px #fff,-5vw 21vh 1px 1px #fff,-27vw 26vh 1px 1px #fff,-47vw -3vh 1px 1px #fff,-28vw -30vh 0px 1px #fff,-43vw -27vh 0px 1px #fff,4vw 22vh 1px 1px #fff,36vw 23vh 0px 0px #fff,-21vw 24vh 1px 1px #fff,-16vw 2vh 1px 0px #fff,-16vw -6vh 0px 0px #fff,5vw 26vh 0px 0px #fff,-34vw 41vh 0px 0px #fff,1vw 42vh 1px 1px #fff,11vw -13vh 1px 1px #fff,48vw -8vh 1px 0px #fff,22vw -15vh 0px 0px #fff,45vw 49vh 0px 0px #fff,43vw -27vh 1px 1px #fff,20vw -2vh 0px 0px #fff,8vw 22vh 0px 1px #fff,39vw 48vh 1px 1px #fff,-21vw -11vh 0px 1px #fff,-40vw 45vh 0px 1px #fff,11vw -30vh 1px 0px #fff,26vw 30vh 1px 0px #fff,45vw -29vh 0px 1px #fff,-2vw 18vh 0px 0px #fff,-29vw -45vh 1px 0px #fff,-7vw -27vh 1px 1px #fff,42vw 24vh 0px 0px #fff,45vw -48vh 1px 0px #fff,-36vw -18vh 0px 0px #fff,-44vw 13vh 0px 1px #fff,36vw 16vh 0px 1px #fff,40vw 24vh 0px 0px #fff,18vw 11vh 0px 0px #fff,-15vw -23vh 1px 0px #fff,-24vw 48vh 0px 1px #fff,27vw -45vh 1px 0px #fff,-2vw -24vh 0px 1px #fff,-15vw -28vh 0px 0px #fff,-43vw 13vh 1px 0px #fff,7vw 27vh 1px 0px #fff,47vw 5vh 0px 0px #fff,-45vw 15vh 1px 1px #fff,-5vw -28vh 0px 1px #fff,38vw 25vh 1px 1px #fff,-39vw -1vh 1px 0px #fff,5vw 0vh 1px 0px #fff,49vw 13vh 0px 0px #fff,48vw 10vh 0px 1px #fff,19vw -28vh 0px 0px #fff,4vw 7vh 0px 0px #fff,21vw 21vh 1px 1px #fff,-15vw -15vh 0px 1px #fff,-6vw -42vh 1px 0px #fff,-15vw 48vh 1px 1px #fff,-23vw 25vh 1px 1px #fff,-48vw 25vh 0px 1px #fff,-31vw -19vh 0px 1px #fff,4vw 37vh 1px 1px #fff,-43vw 28vh 0px 0px #fff,3vw -25vh 0px 1px #fff,-39vw 14vh 0px 1px #fff,-40vw 31vh 0px 1px #fff,35vw -36vh 1px 1px #fff,16vw 49vh 0px 0px #fff,6vw 39vh 0px 0px #fff,3vw -35vh 0px 1px #fff,-44vw -2vh 1px 0px #fff,-6vw 21vh 1px 0px #fff,48vw 9vh 1px 1px #fff,-43vw 30vh 1px 1px #fff,29vw -12vh 1px 1px #fff,-48vw 13vh 1px 0px #fff,-42vw 32vh 1px 1px #fff,34vw 15vh 1px 1px #fff,29vw -37vh 1px 1px #fff,28vw 2vh 0px 0px #fff;
+  animation: zoom 16s alternate infinite; 
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}
+
+#chartWrapper {
+    display: inline-block;
+    position: relative;
+    width: 22%;
+    margin: auto;
+}
+
+#year {
+    width: 80px;
+}
+
+#startYear {
+    width: 80px;
+}
+
+#endYear {
+    width: 80px;
+}
+
+#graph, ::placeholder{
+    color: white;
+}
+
+.gButton {
+    background-color: rgba(0,0,0,0.2);
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.gButton:focus {
+    background-color: rgba(0,0,0,0.1);
+    border: 1px solid white;
+}
+
+.gButton:hover {
+    background-color: #232527;
+    border: 1px solid white;
+}
+
+h4 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #FF9052;
+}
