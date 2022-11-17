@@ -34,6 +34,8 @@
 
             <div id="spacer"></div>
 
+            <h4>FireTable</h4>
+
             <div id="filters">
                 <div id="topHalf">
                     <button class="buttonLabel" id="locationButton">Location: N/A</button>
@@ -71,6 +73,12 @@
                     Upon doing so, the below table will populate with your filters applied. You can also clear all filters and set to the original table by 
                     clicking the "clear filters" button. To close this information section, simply click the question mark button again.
                 </p>
+                <p>
+                    <h2>FireGraph</h2>
+                    Relatively intuitive, the FireGraph initially displays the amount of fireballs over the last 6 years. However, it can be modified with filters.
+                    You can update the graph by year to view the # of fireballs per month for that year, or you can set a start and end year to view the frequency of
+                    fireballs for your selected year span.
+                </p>
                 <p id="closeInfo">
                     To close this information section, simply click the question mark button again.
                 </p>
@@ -95,19 +103,19 @@
                 </tbody>
             </table>
             <div id="firedataContent"> 
-                <p>Fireball Frequency Graph</p>
+                <h4>FireGraph</h4>
                 <div id="chartWrapper">
                     <canvas id="myChart" width="400" height="400"></canvas>
                 </div>
                 <!--text input year and button to update graph with year-->
                 <p>Update By Year (1988-2022)</p>
-                <input type="number" id="year" min="1988" max="2022" placeholder="Enter year">
-                <button id="update">Update</button>
+                <input class="graph" type="number" id="year" min="1988" max="2022" placeholder="Enter year">
+                <button class="gButton" id="update">Update</button>
                 <!--update graph with year span-->
                 <p>Update By Year Span</p>
-                <input type="number" id="startYear" placeholder="Start Year" min="1988" max="2022">
-                <input type="number" id="endYear" placeholder="End Year" min="1988" max="2022">
-                <button id="updateSpan">Update</button>
+                <input class="graph" type="number" id="startYear" placeholder="Start Year" min="1988" max="2022">
+                <input class="graph" type="number" id="endYear" placeholder="End Year" min="1988" max="2022">
+                <button class="gButton" id="updateSpan">Update</button>
     
                 <div id="data_interpretation">
                     <p id="interpret"></p>

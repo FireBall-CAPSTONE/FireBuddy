@@ -42,8 +42,8 @@ const graph = fireDF => {
         labels: last6, //x axis labels
         datasets: [{
             label: 'Fireball Frequency - Past 6 Years',
-            backgroundColor: 'rgb(150, 134, 142)',
-            borderColor: 'rgb(255, 99, 132)',
+            backgroundColor: 'rgba(46,54,67,255)',
+            borderColor: 'rgba(46,54,67,255)',
             data: last6Count, //y axis data
         }]
     };
@@ -54,20 +54,50 @@ const graph = fireDF => {
         data: chartData,
         options: {
             responsive: true,
+            plugins: {
+                legend: {
+                    labels: {
+                        color: "white",
+                        font: {
+                            size: 18
+                        }
+                    }
+                },
+            },
             scales: {
                 x: {
                     display: true,
                     reverse: true,
                     title: {
                         display: true,
-                        text: 'Year'
+                        text: 'Year',
+                        color: "white",
+                        font: {
+                            size: 16
+                        }
+                    },
+                    ticks: {
+                        color: "#53687E"
+                    },
+                    grid: {
+                        color: "black"
                     }
                 },
                 y: {
                     display: true,
                     title: {
                         display: true,
-                        text: 'Number of Fireballs'
+                        text: 'Number of Fireballs',
+                        color: "white",
+                        font: {
+                            size: 16
+                        }
+                    },
+                    ticks: {
+                        color: "#53687E"
+                    },
+                    grid: {
+                        color: "black"
                     }
                 }
             }

@@ -306,3 +306,42 @@ body {
     width: 22%;
     margin: auto;
 }
+
+#year {
+    width: 80px;
+}
+
+#startYear {
+    width: 80px;
+}
+
+#endYear {
+    width: 80px;
+}
+
+#graph, ::placeholder{
+    color: white;
+}
+
+.gButton {
+    background-color: rgba(0,0,0,0.2);
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.gButton:focus {
+    background-color: rgba(0,0,0,0.1);
+    border: 1px solid white;
+}
+
+.gButton:hover {
+    background-color: #232527;
+    border: 1px solid white;
+}
+
+h4 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #FF9052;
+}
