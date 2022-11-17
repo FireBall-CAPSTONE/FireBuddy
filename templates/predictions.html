@@ -66,7 +66,6 @@ var amount= $('#amount').val();
         };
 
         vegaEmbed("#"+div, url, opt, function(error, result) {
-          // result.view is the Vega View, url is the original Vega-Lite specification
           vegaTooltip.vegaLite(result.view, url);
         });
       }
@@ -76,8 +75,8 @@ var amount= $('#amount').val();
             <p> </p>
             <p>
                 Enter a Prediction<br><br>
-                Date : <input type="date" id="date" name="date"><br><br>
-                Number of Fireballs <input type="amount" id="amount" name="amount" min=2><br><br>
+                Date: <input type="date" id="date" name="date"><br><br>
+                Number of Fireballs: <input type="amount" id="amount" name="amount" min=2><br><br>
                 <button id="clicked" onclick="pre()">Submit</button>
         </p>
             <div class="show-data" > </div>

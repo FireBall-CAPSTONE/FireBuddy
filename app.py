@@ -50,15 +50,15 @@ fire_df = load_data()
 def home():
     return render_template('home.html')
 
-@app.route('/info')
+@app.route('/info', methods=["GET"])
 def info():
     return render_template('info.html')
 
-@app.route('/firedata')
+@app.route('/firedata', methods=["GET"])
 def data():
     return render_template('firedata.html')
 
-@app.route('/prediction')
+@app.route('/prediction', methods=["GET"])
 def prediction():
     return render_template('predictions.html')
 
@@ -104,9 +104,11 @@ def data_group():
     )
     return group_chrt.to_json()
 
-def pred1(date, amount):
+def pred(date, amount):
     diff_d = (datetime.datetime.strptime(date, "%Y-%m-%d").date() - fire_df['date'][0].date()).days
-    return (1 - stats.poisson.cdf(int(amount) - 1,0.09202941761081296*diff_d))*100
+    cdf = (1 - stats.poisson.cdf(int(amount) - 1,0.09202941761081296*diff_d))*100
+    pmf = stats.poisson.pmf(int(amount), 0.09202941761081296*diff_d)*100
+    return cdf, pmf
 
 
 @app.route('/predict', methods=['GET','POST'], endpoint='predfunc')
@@ -115,9 +117,10 @@ def prediction():
     word = request.args.get('date')
     amount = request.form['amount']
     
-    pred = pred1(date, amount)
+    pred1, pred2 = pred(date, amount)
     result = {
-        "output": pred
+        "output1": pred1,
+        "output2": pred2
     }
     result = {str(key): value for key, value in result.items()}
     return jsonify(result=result)
