@@ -47,7 +47,9 @@ $(document).ready(function () {
         // http://api.positionstack.com/v1/reverse?access_key=5b2f18ac06bc59232150af945df40d0b&query=22.7,97.6
         // ^ console.log(result.data[0].country);
         let currentCountry = "";
-        let countryUrl = 'http://api.positionstack.com/v1/reverse?access_key=5b2f18ac06bc59232150af945df40d0b&query=' + latitude + ',' + longitude;
+        let countryUrl = 'http://api.positionstack.com/v1/reverse?access_key=4c7a364ab97112a73e821590517d2667&query=' + latitude + ',' + longitude;
+
+        console.log(countryUrl);
 
         $.ajax({
             url: countryUrl,
@@ -58,6 +60,7 @@ $(document).ready(function () {
             },
             success: function (result) {
                 currentCountry = result.data[0].country;
+                console.log(currentCountry);
                 // Adding the current country into the fireball records
                 queryResult[i].push(currentCountry);
                 if (currentCountry == country) {
