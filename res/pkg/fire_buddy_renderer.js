@@ -296,6 +296,24 @@ export class App {
             wasm.__wbindgen_add_to_stack_pointer(16);
         }
     }
+    /**
+    * @param {number} lat
+    * @param {number} lon
+    * @param {number} alt
+    */
+    add_fireball(lat, lon, alt) {
+        try {
+            const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
+            wasm.app_add_fireball(retptr, this.ptr, lat, lon, alt);
+            var r0 = getInt32Memory0()[retptr / 4 + 0];
+            var r1 = getInt32Memory0()[retptr / 4 + 1];
+            if (r1) {
+                throw takeObject(r0);
+            }
+        } finally {
+            wasm.__wbindgen_add_to_stack_pointer(16);
+        }
+    }
 }
 
 async function load(module, imports) {
@@ -568,7 +586,7 @@ function getImports() {
         const ret = wasm.memory;
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper118 = function(arg0, arg1, arg2) {
+    imports.wbg.__wbindgen_closure_wrapper122 = function(arg0, arg1, arg2) {
         const ret = makeMutClosure(arg0, arg1, 24, __wbg_adapter_18);
         return addHeapObject(ret);
     };

@@ -31,7 +31,6 @@ async function run() {
         const currTime = Date.now();
         delta = ((currTime - lastDrawTime));
 
-        
         lastDrawTime = currTime;
         // timer.innerHTML = `${delta} ms`;
 

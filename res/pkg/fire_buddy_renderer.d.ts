@@ -17,6 +17,12 @@ export class App {
 /**
 */
   render(): void;
+/**
+* @param {number} lat
+* @param {number} lon
+* @param {number} alt
+*/
+  add_fireball(lat: number, lon: number, alt: number): void;
 }
 
 export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembly.Module;
@@ -27,6 +33,7 @@ export interface InitOutput {
   readonly app_new: (a: number, b: number) => number;
   readonly app_update: (a: number, b: number, c: number, d: number, e: number) => void;
   readonly app_render: (a: number, b: number) => void;
+  readonly app_add_fireball: (a: number, b: number, c: number, d: number, e: number) => void;
   readonly __wbindgen_malloc: (a: number) => number;
   readonly __wbindgen_realloc: (a: number, b: number, c: number) => number;
   readonly __wbindgen_export_2: WebAssembly.Table;
