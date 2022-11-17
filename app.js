@@ -2,7 +2,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
-const storyRoutes = require('./routes/storyRoutes');
+const pageRoutes = require('./routes/pageRoutes');
 const { response } = require('express');
 
 //create application
@@ -22,11 +22,12 @@ app.use(methodOverride('_method'));
 
 //set up routes
 app.get('/', (req, res) => {
-    res.render('index');
+    res.render('');
 });
 
-app.use('/stories', storyRoutes);
+app.use('/fireball', pageRoutes);
 
+/*
 app.use((req, res, next) => {
     let err = new Error('The server cannot locate ' + req.url);
     err.status = 404;
@@ -43,6 +44,7 @@ app.use((err, req, res, next) => {
     res.status(err.status);
     res.render('error', {error: err});
 });
+*/
 
 //start the server
 app.listen(port, host, () => {
