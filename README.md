@@ -6,6 +6,10 @@ Added Backend and rearrange files from Main.
 
 - Flask
 - Altair
+- Numpy
+- Pandas
+- Scipy
+
 
 ## Running
 
