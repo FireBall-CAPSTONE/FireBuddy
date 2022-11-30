@@ -23,6 +23,10 @@ export class App {
 * @param {number} alt
 */
   add_fireball(lat: number, lon: number, alt: number): void;
+/**
+* @param {Uint32Array} list
+*/
+  static set_filter(list: Uint32Array): void;
 }
 
 export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembly.Module;
@@ -34,10 +38,12 @@ export interface InitOutput {
   readonly app_update: (a: number, b: number, c: number, d: number, e: number) => void;
   readonly app_render: (a: number, b: number) => void;
   readonly app_add_fireball: (a: number, b: number, c: number, d: number, e: number) => void;
+  readonly app_set_filter: (a: number, b: number) => void;
   readonly __wbindgen_malloc: (a: number) => number;
   readonly __wbindgen_realloc: (a: number, b: number, c: number) => number;
   readonly __wbindgen_export_2: WebAssembly.Table;
-  readonly _dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h79c154a5881d9710: (a: number, b: number) => void;
+  readonly _dyn_core__ops__function__FnMut__A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h23d9e4ca3e4111cd: (a: number, b: number, c: number) => void;
+  readonly _dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__hfb46c97fd1fe0f0f: (a: number, b: number) => void;
   readonly __wbindgen_add_to_stack_pointer: (a: number) => number;
   readonly __wbindgen_exn_store: (a: number) => void;
 }
