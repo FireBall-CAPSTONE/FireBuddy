@@ -16,7 +16,7 @@ async function run() {
 
     // app.render();
     for( let i = 0; i < 100; i ++ ) {
-        // Lat                      // Long                      // Altitude
+        //               // Lat                      // Long                      // Altitude
         app.add_fireball((Math.random() * 180) - 90, (Math.random() * 360) - 180, (Math.random() * .035) + .005);
     }
 
