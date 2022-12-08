@@ -335,10 +335,10 @@ export class App {
         }
     }
     /**
-    * @param {Uint32Array} list
+    * @param {Uint32Array} _list
     */
-    static set_filter(list) {
-        const ptr0 = passArray32ToWasm0(list, wasm.__wbindgen_malloc);
+    static set_filter(_list) {
+        const ptr0 = passArray32ToWasm0(_list, wasm.__wbindgen_malloc);
         const len0 = WASM_VECTOR_LEN;
         wasm.app_set_filter(ptr0, len0);
     }
@@ -638,16 +638,16 @@ function getImports() {
         const ret = wasm.memory;
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper177 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 45, __wbg_adapter_20);
+    imports.wbg.__wbindgen_closure_wrapper167 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 42, __wbg_adapter_20);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper179 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 45, __wbg_adapter_20);
+    imports.wbg.__wbindgen_closure_wrapper169 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 42, __wbg_adapter_20);
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper181 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 45, __wbg_adapter_25);
+    imports.wbg.__wbindgen_closure_wrapper171 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 42, __wbg_adapter_25);
         return addHeapObject(ret);
     };
 

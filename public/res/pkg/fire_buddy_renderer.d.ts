@@ -24,9 +24,9 @@ export class App {
 */
   add_fireball(lat: number, lon: number, alt: number): void;
 /**
-* @param {Uint32Array} list
+* @param {Uint32Array} _list
 */
-  static set_filter(list: Uint32Array): void;
+  static set_filter(_list: Uint32Array): void;
 }
 
 export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembly.Module;

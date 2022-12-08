@@ -1,0 +1,27 @@
+{
+  "name": "firebuddy",
+  "version": "1.0.0",
+  "description": "This software generates a webpage with data, filters, and visualizations relating to NASA's fireball data.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FireBall-CAPSTONE/FireBuddy.git"
+  },
+  "author": "Team Fireball",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FireBall-CAPSTONE/FireBuddy/issues"
+  },
+  "homepage": "https://github.com/FireBall-CAPSTONE/FireBuddy#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "luxon": "^3.1.0",
+    "method-override": "^3.0.0",
+    "morgan": "^1.10.0",
+    "uuid": "^9.0.0"
+  }
+}
