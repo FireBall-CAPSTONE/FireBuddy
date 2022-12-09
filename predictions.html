@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FireBuddy</title>
     <link rel="stylesheet" href="predictions.css">
-    <script type="text/javascript" src="prediction.js"></script>
+    <script src="predictions.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
@@ -35,19 +35,18 @@
         <div id="predictionsContent">
             <p> </p>
             <br>
-            <form>
+            <form name="poisson" method="post" id="">
             <pre>
-                      Date: <input type="date" name="day" >
-                       Fireballs: <input type="number" name="k" min = 0>
+                Date: <input type="date" name="day" min = 0>
+                Fireballs: <input type="number" name="k" min = 0>
             </pre>
-
-             CDF
-            <input type="text" name="result1" size="21">
             <input type="button" value="Calculate" onclick="compute(this.form)">
+                <br>
 
+                CDF
+                <input type="text" name="result1" size="21">
                 PMF
                 <input type="text" name="result2" size="21">
-            <input type="button" value="Calculate" onclick="compute(this.form)">
             <br>
             </form>
 
@@ -78,24 +77,7 @@
             Applying a log transformation on both TotalRadiatedEnergy and TotalImpactEnergy gives us a clear relationship.
 
             <vegachart schema-url="scatter.json"></vegachart>
-            <script>
-            (function(vegaEmbed) {
-              var spec = require('./data.json');
-              var embedOpt = {"mode": "vega-lite"};
 
-              function showError(el, error){
-                  el.innerHTML = ('<div class="error" style="color:red;">'
-                                  + '<p>JavaScript Error: ' + error.message + '</p>'
-                                  + "<p>This usually means there's a typo in your chart specification. "
-                                  + "See the javascript console for the full traceback.</p>"
-                                  + '</div>');
-                  throw error;
-              }
-              const el = document.getElementById('vis');
-              vegaEmbed("#vis", spec, embedOpt)
-                .catch(error => showError(el, error));
-            })(vegaEmbed);
-          </script>
 
             <br>
 
