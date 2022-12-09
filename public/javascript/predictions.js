@@ -28,11 +28,9 @@ function compute(form) {
     Day = new Date(eval(form.day.value))
     K = eval(form.k.value)
 
-    const diffDays = Math.ceil(new Date(2022-10-28) - Day / (1000 * 60 * 60 * 24))
+    diffDays = Math.ceil(Math.abs(new Date(2022-10-28) - Day) / (1000 * 60 * 60 * 24))
     lambda = diffDays * 0.09124051630702533
-	if (lambda<=0) {
-		alert("Number of Fireballs must be positive.");
-	} else if (K<0) {
+	if (K<0) {
 		cdf=0
 	} else {
 		K = Math.floor(K)
