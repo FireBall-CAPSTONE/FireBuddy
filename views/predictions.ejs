@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FireBuddy</title>
-    <link rel="stylesheet" href="predictions.css">
-    <script src="../public/javascript/predictions.js"></script>
+    <link rel="stylesheet" href="../css/predictions.css">
+    <script src="../javascript/predictions.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
@@ -70,13 +70,13 @@
 
             We can also look at the correlation matrix between each feature in our dataset to look at different relationships. We see there are strong relationships between TotalRadiatedEnergy-TotalImpactEnergy, Longitude-vy, and Latitude-vz.
 
-            <img src="../public/images/corr.png" alt="Correlation Matrix">
+            <img src="../images/corr.png" alt="Correlation Matrix">
 
             <br>
 
             Applying a log transformation on both TotalRadiatedEnergy and TotalImpactEnergy gives us a clear relationship.
 
-            <vegachart schema-url="../public/json/scatter.json"></vegachart>
+            <vegachart schema-url="../json/scatter.json"></vegachart>
 
 
             <br>
@@ -84,11 +84,11 @@
             An interactive view of when a fireball occurred is provided below.
             <br>
 
-            <vegachart schema-url="../public/json/time.json"></vegachart>
+            <vegachart schema-url="../json/time.json"></vegachart>
 
             <br>
 
-            <vegachart schema-url="../public/json/world.json"></vegachart>
+            <vegachart schema-url="../json/world.json"></vegachart>
 
             <br>
             Looking at the time deltas of the whole dataset we see a large outlier at the beginning of 1988  which could result from not having an interest to record fireballs between those times. And the following graph is if we removed the dates before 1993(3). Finally, in the last graph, we see how many of each time deltas occur.
