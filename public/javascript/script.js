@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     // load & parse fire_df.csv -- fire_df.csv is NASA csv, preprocessed in python to create new columns for 'Year', 'Month', 'Date', 'Time'
     let fireDF;
-    const model = "/../../fire_df.csv";
+    const model = "/fire_df.csv";
     d3.csv(model)
         .then(data => {
         fireDF = data
