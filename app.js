@@ -18,6 +18,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({extended: true}));
 app.use(morgan('tiny'));
 app.use(methodOverride('_method'));
+app.use(express.static(__dirname + "/public/javascript"));
 
 
 //set up routes
